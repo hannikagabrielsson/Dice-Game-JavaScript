@@ -3,7 +3,10 @@ var name2;
 function askNameOne() {
     name1 = prompt("What is your name?");
     while (name1 === "") {
-        prompt("What is your name?");
+        name1 = prompt("What is your name?");
+        if (name1 != "") {
+            break;
+        }
     }
    
     var firstName = document.createElement("p");
@@ -15,7 +18,10 @@ function askNameOne() {
 function askNameTwo() {
     name2 = prompt("What is your name?");
     while (name2 === "") {
-        prompt("What is your name?");
+        name2 = prompt("What is your name?");
+        if (name2 != "") {
+            break;
+        }
     }
    
     var secondName = document.createElement("p");
