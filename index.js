@@ -2,13 +2,22 @@ var name1;
 var name2;
 function askNameOne() {
     name1 = prompt("What is your name?");
+    while (name1 === "") {
+        prompt("What is your name?");
+    }
+   
     var firstName = document.createElement("p");
     firstName.textContent = name1;
     document.querySelector(".dice1").prepend(firstName);
     document.querySelector(".btn1").style.display = "none";
+    
 }
 function askNameTwo() {
     name2 = prompt("What is your name?");
+    while (name2 === "") {
+        prompt("What is your name?");
+    }
+   
     var secondName = document.createElement("p");
     secondName.textContent = name2;
     document.querySelector(".dice2").prepend(secondName);
