@@ -22,6 +22,9 @@ h1 {
   color: #cc4eb9
 }
 
+.btn1, .btn2 {
+  margin-block-end: 2rem;
+}
 p {
   font-size: 2rem;
   color: #cc4eb9;
@@ -30,7 +33,9 @@ p {
 }
 
 img {
-  width: 80%;
+  height: 15rem;
+  display: block;
+  padding: 0 2rem;
 }
 
 footer {
@@ -49,5 +54,6 @@ footer {
   font-family: 'Gruppo', sans-serif;
   font-size: 2rem;
   margin-block-start: 3rem;
-  
+  background-color: #195d4b;
+  color: white;
 }

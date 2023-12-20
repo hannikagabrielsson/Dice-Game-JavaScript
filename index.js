@@ -1,24 +1,53 @@
+var name1;
+var name2;
+function askNameOne() {
+    name1 = prompt("What is your name?");
+    var firstName = document.createElement("p");
+    firstName.textContent = name1;
+    document.querySelector(".dice1").prepend(firstName);
+    document.querySelector(".btn1").style.display = "none";
+}
+function askNameTwo() {
+    name2 = prompt("What is your name?");
+    var secondName = document.createElement("p");
+    secondName.textContent = name2;
+    document.querySelector(".dice2").prepend(secondName);
+    document.querySelector(".btn2").style.display = "none";
+}
+
+
+document.querySelector(".btn1").addEventListener("click", askNameOne);
+document.querySelector(".btn2").addEventListener("click", askNameTwo);
+
+
 document.querySelector(".container").appendChild(document.createElement("div"));
 
 var rollUp = document.createElement("button")
 document.querySelector(".container").appendChild(rollUp);
 
-document.querySelector("button").textContent = "Roll up!";
+rollUp.textContent = "Roll up!";
 document.querySelector(".container div").classList.add("btnContainer");
-document.querySelector("button").classList.add("btn");
+rollUp.classList.add("btn");
 
 
 
 function rollDice(){
 
+    if (name1 === undefined && name2 === undefined){
+        alert("Insert player name!")
+    }
+    else {
+
+  
+
 var randomNumberFirst = Math.floor(Math.random()*6)+1;
 var randomNumberSecond = Math.floor(Math.random()*6)+1;
 
 if (randomNumberFirst > randomNumberSecond){
-    document.querySelector("h1").textContent = "🏆 Player 1 wins!";
+    document.querySelector("h1").textContent = "🏆 " + name1 + " wins!";
 }
 else if (randomNumberFirst < randomNumberSecond){
-    document.querySelector("h1").textContent = "Player 2 wins! 🏆";
+    document.querySelector("h1").textContent = name2 + " wins! 🏆";
 }
 else {
     document.querySelector("h1").textContent = "Draw!";
@@ -65,6 +94,6 @@ switch (randomNumberSecond) {
         break;
 }
 }
-
+}
 rollUp.addEventListener("click", rollDice);
 
