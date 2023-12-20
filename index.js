@@ -48,7 +48,7 @@ rollUp.classList.add("btn");
 
 function rollDice(){
 
-    if (name1 === undefined && name2 === undefined){
+    if (name1 === undefined || name2 === undefined){
         alert("Insert player name!")
     }
     else {
