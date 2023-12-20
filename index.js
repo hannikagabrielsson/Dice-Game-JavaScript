@@ -13,6 +13,9 @@ function askNameOne() {
     firstName.textContent = name1;
     document.querySelector(".dice1").prepend(firstName);
     document.querySelector(".btn1").style.display = "none";
+    var firstLetter = name1.slice(0,1).toUpperCase();
+    var restOfTheName = name1.slice(1, name1.length).toLowerCase();
+    name1 = firstLetter + restOfTheName;
     
 }
 function askNameTwo() {
@@ -28,6 +31,9 @@ function askNameTwo() {
     secondName.textContent = name2;
     document.querySelector(".dice2").prepend(secondName);
     document.querySelector(".btn2").style.display = "none";
+    var firstLetter = name2.slice(0,1).toUpperCase();
+    var restOfTheName = name2.slice(1, name1.length).toLowerCase();
+    name2 = firstLetter + restOfTheName;
 }
 
 
